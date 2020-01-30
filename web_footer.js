@@ -1,0 +1,1 @@
+document.getElementById("web_footer").innerHTML = '<table border=0 width="100%"><tr><td>© 2020 by Viking JSC.<td align="right"><small><small><small>Designed by "Van Xuan Technology Service Company Limited | http://vxtgroup.com" | v1vi QN </table>';

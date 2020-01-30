@@ -1,0 +1,23 @@
+img:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+
+<span onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" 
+ onClick="window.location.replace('/gt-nha-may-viking.html');">
+<b>DỊCH VỤ CHÍNH CỦA CHÚNG TÔI v1</b>
+</span>
+
+
+<img id="myslide" src="img/slide01.jpg" width="100%">
+
+<hr>
+<script src="/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#myslide").fadeOut(1000);
+  });
+});
+</script>
