@@ -6,7 +6,7 @@ h1 {
 
 
 h2 {
-  font-family: Arial;   
+  font-family: Arial; color: blue; 
 }
 
 h3 {
@@ -24,12 +24,28 @@ p.caption {
   text-align: center; font-family: Arial; font-weight: bold; font-size: 11pt; 
 }
 
-
-td {
+div.image-caption {
+	background-color: #4472C4; color: white; text-align: center; padding-bottom: 6px;
 }
-th {
-  background-color: #4CAF50;
+
+div.image-caption-project {
+	background-color: #4472C4; color: white; text-align: center; padding-bottom: 6px;
+	padding-top: 8px; margin-top: 5px; 
+}
+
+table.list {
+  border-collapse: collapse;
+  width: 790 ;
+}
+
+td.list {
+  padding: 5px;
+}
+th.list {
+  background-color: #4472C4;  text-align: center;
   color: white;
+  padding: 5px;
+  font-size: 12pt;
 }
 
 ul {
@@ -52,36 +68,75 @@ ul li ul li {
 ul li ul li a {display:block !important;} 
 ul li ul li:hover {background: #666;}
 
+li {
+  margin-left: 16px;  margin-top: 6px;
+}
+
 bodytext {
   line-height: 1.5;  color: black;
 }
 
 .b5 {border-bottom-style: solid;}
 
+table.desktop_menu {
+  border-color: #0000FF;
+}
+tr.desktop_menu {
+}
+td.desktop_menu {
+  background-color: cyan;
+  color: white !important;
+}
+
+.td_desktop_menu {
+    background: blue;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.td_desktop_menu:hover {
+  background: darkorange; /* #FFDD00; */
+  cursor: pointer;
+}
+
 .desktop_menu:link, .desktop_menu:visited {
-    background: #0000FF;
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
     font-family:Verdana; font-weight: bold; font-size: smaller;
-    padding: 5px;
+}
+.desktop_menu:hover {
+    // background: #FFDD00;
 }
 
 
-.desktop_menu:hover {
+.sub_menu:link, .sub_menu:visited {
+    background: #eee;
+    color: black;
+    text-decoration: none;
+    font-family:Verdana; font-weight: bold; font-size: smaller;
+    padding: 3px 10px 3px 10px;
+}
+.sub_menu:hover {
     background: #FFDD00;
     color: #880000;
+}
+.sub_menu_selected {
+    background: #000088;
+    color: #FFFFFF;
+    font-family:Verdana; font-weight: bold; font-size: smaller;
+    padding: 3px 10px 3px 10px;
 }
 
 
 <!-- styles for mobile menu -->
 
-.container a {
+.container_mobile_menu a {
   background-color: #FFFFFF;
   display: inline-block;
   cursor: pointer;
 }
 
-.container a:hover {
+.container_mobile_menu a:hover {
   background-color: #FFFFFF;
   display: inline-block;
   cursor: pointer;
@@ -145,8 +200,10 @@ bodytext {
 }
 
 
-@media screen and (max-width: 900px) {
 
+@media screen and (max-width: 900px) { /*** MOBILE VIEW  ***/
+
+/**** DATA RECORD VIEW. FOR FUTURE USAGE ONLY ****/
   table.mv1, tbody.mv1, th.mv1, td.mv1 { display: block; border: none; }
   thead.mv1 { display: none; }
 
@@ -174,22 +231,27 @@ bodytext {
   /* tr:nth-child(odd) { background: #ccc; } --> alternative color for odd/even records */
     
   td.mv2 {
-    border: none; /*  border-bottom: 1px solid #eee; */
+    border: none;  /* border-bottom: 1px solid #eee;  */
     padding-left: 5px;
     color: blue;
     padding-top: 30px;
   }
 
-  td.mv2:before {
+  td.mv2:before {  /*  PLACE-HOLDER ONLY   */
     position: absolute; left: 5px;
     width: 190px;
     color: green;
   }
 
-  /*  Label the data. You could also use a data-* attribute and content for this. */
+  /* PLACE-HOLDER ONLY. Label the data. You could also use a data-* attribute and content for this. */
   td.mv2:nth-of-type(1):before { content: ""; }
   td.mv2:nth-of-type(2):before { content: ""; }
   td.mv2:nth-of-type(3):before { content: ""; }
+
+table.list {
+  border-collapse: collapse;
+  width: 99% ;
+}
 
 /************************************/
 
@@ -201,10 +263,14 @@ bodytext {
   }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 901px) {   /***** DESKTOP VIEW ****/
+  div.image-caption-project { 	font-size: 20pt; }
+
+  table.mv2 { table-layout: fixed ;}
 
   td.mv2 {
     padding-top: 20px;
+    vertical-align: bottom;
   }
 
   .mobile-content {
@@ -213,7 +279,27 @@ bodytext {
   .desktop-content {
     display: block;
   }
+}   /***** DESKTOP VIEW ****/
+
+
+/* the mini style block below is just for up and down arrows */
+ec {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: 0.5s;
+  border-color: green;
 }
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg) translate(-3px,-3px);
+  -webkit-transform: rotate(45deg) translate(-3px,-3px);
+}
+
 
 </style>
 

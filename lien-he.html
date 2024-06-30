@@ -1,18 +1,71 @@
-<!--#include virtual="./common-header.inc" -->
+
+<!DOCTYPE html>  <!--  very important for responsive tables -->
+
+<head>
+
+<title>Công ty Cổ phần Viking - Viking JSC
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="web-styles.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="all">
+
+  <script src="./jquery.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+
+</head>
+
 <body>
-<!--#include virtual="./common-menu.inc" -->
+<div class="container">
 
-<h2>Thông tin liên hệ:</h2>
+<a name="pagetop"></a>
 
-<!--#include virtual="./common-footer.inc" -->
+<div id="desktop-header"> </div>
+
+<div id="mobile-header"> </div>
+
+
+<h3 class="mt-3">THÔNG TIN LIÊN HỆ: <br><i>Contact information</i></h2>
+
+<hr>
+<p>
+<b>CÔNG TY CỔ PHẦN VIKING VIỆT NAM</b>
+<br><i><b> Viking Vietnam Joint Stock Company </i> </b>
+
+<p>Văn phòng & nhận thư: Phòng 1004 Toà HUD3 Linh Đàm, p. Hoàng Liệt, q. Hoàng Mai, TP. Hà Nội
+<br><i> Office address: Room 1004, HUD3 Apartment, Linh Dam Urban Area, Hoang Mai District, Hanoi City </i>
+
+<p>Nhà máy: Km 5 Quốc lộ 10, Xã Thành Lợi, huyện Vụ Bản, tỉnh Nam Định
+<br><i> Factory address: KM5; Thanh Loi Commune; Vu Ban District; Nam Dinh </i>
+
+<!-- Điện thoại: 024.3864.5599 -->
+<br>
+<br>Hotline: 0982.312.373 (Mr. Quang Hùng)
+<br>Email: <a href="mailto:hung@vikingjsc.com" style="text-decoration:none">hung@vikingjsc.com</a>.
+Website: <a href="https://VikingJsc.com" style="text-decoration:none">https://vikingjsc.com</a>
+<br>
+<br>Số ĐKKD: 0106610502. Sở Kế hoạch Đầu tư Hà Nội cấp ngày cấp: 30-07-2014.
+
+<hr>
+<p>Bản đồ địa chỉ nhà máy: <br><i>Factory address map:</i>
 
 <p>
-Ngày hôm nay: 
-<!--#config timefmt="%A, %d %B %Y" -->
-<!--#echo var="DATE_LOCAL" -->
+<a target='_blank' href="https://www.google.com/maps/place/20%C2%B023'17.1%22N+106%C2%B008'25.0%22E/@20.3880779,106.1303615,15z/data=!4m4!3m3!8m2!3d20.3880779!4d106.1402749?entry=ttu">
+  <img src="./img/map03.png" style="cursor:pointer" width="100%">
+</a>
 <p>
 
-<img src="./img/map01.jpg" style="cursor:pointer" width="95%"
- onClick="window.location.href='https://www.google.com/maps/place/Rice+City+Linh+%C4%90%C3%A0m+-+T%C3%B2a+B%E1%BA%AFc,+Ho%C3%A0ng+Li%E1%BB%87t,+Ho%C3%A0ng+Mai,+H%C3%A0+N%E1%BB%99i/@20.9638896,105.8202822,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acfdf83d6ac1:0x44c0a5eeddaf1ac0!8m2!3d20.9638896!4d105.8224709';">
+<div id="web_footer"  class="mb-2"></div>
+<!-- script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script -->
 
-<div id="web_footer"></div><script src="./web_footer.js"></script>
+<script src="./web_footer.js?version=1.1"></script>
+
+<script> 
+    $(function(){
+      $("#desktop-header").load("desktop-header.html"); 
+      $("#mobile-header").load("mobile-header.html"); 
+    });
+</script> 
+
+</div> <!-- container -->
